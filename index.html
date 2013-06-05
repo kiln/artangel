@@ -32,6 +32,45 @@
 		#audio {
 			width: 100%;
 		}
+		
+		@-webkit-keyframes pulse {
+		    0% { -webkit-transform: scale(1.5); }	
+			50% { -webkit-transform: scale(2); }
+		    100% { -webkit-transform: scale(1.5); }
+		}
+		@-moz-keyframes pulse {
+		    0% { -moz-transform: scale(1.5); }	
+			50% { -moz-transform: scale(2); }
+		    100% { -moz-transform: scale(1.5); }
+		}
+		@-o-keyframes pulse {
+		    0% { -o-transform: scale(1.5); }	
+			50% { -o-transform: scale(2); }
+		    100% { -o-transform: scale(1.5); }
+		}
+		@keyframes pulse {
+		    0% { transform: scale(1.5); }	
+			50% { transform: scale(2); }
+		    100% { transform: scale(1.5); }
+		}
+		.pulse {
+			-webkit-animation-name: pulse;
+			-moz-animation-name: pulse;
+			-o-animation-name: pulse;
+			animation-name: pulse;
+		}
+		.animated {
+			-webkit-animation-fill-mode:both;
+			-moz-animation-fill-mode:both;
+			-ms-animation-fill-mode:both;
+			-o-animation-fill-mode:both;
+			animation-fill-mode:both;
+			-webkit-animation-duration:0.5s;
+			-moz-animation-duration:0.5s;
+			-ms-animation-duration:0.5s;
+			-o-animation-duration:0.5s;
+			animation-duration:0.5s;
+		}
 	</style>
 	<script>
 		var sounds = {
@@ -57,6 +96,9 @@
 		
 		$(document).ready(function(){
 			$("source").attr("src","sounds/" + soundtoplay);
+			$("#title").click(function(){
+				$("#wrapper").addClass("animated pulse")
+			});
 		});
 
 		//widgets.js function to call to reload tweet: twttr.widgets.load()
