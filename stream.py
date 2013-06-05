@@ -47,7 +47,7 @@ parser = optparse.OptionParser()
 # parser.add_option("", "--channel",
 #                   action="store", default="artangel",
 #                   help="Redis channel to publish results on")
-(options, keywords) = parser.parse_args()
+(options, args) = parser.parse_args()
 
 # Create a Redis connection (It does not actually connect till used)
 r = redis.StrictRedis()
@@ -101,4 +101,4 @@ class MyStreamListener(tweepy.StreamListener):
 
 # Perform the search
 listener = MyStreamListener()
-tweepy.Stream(auth, listener).filter(track=keywords)
+tweepy.Stream(auth, listener).filter(track=KEYWORDS)
