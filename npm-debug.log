@@ -1,0 +1,597 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'hiredis', 'redis' ]
+2 info using npm@1.2.2
+3 info using node@v0.8.18
+4 verbose read json /Users/robin/Dropbox/Kiln-robin/artangel/package.json
+5 verbose read json /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis/package.json
+6 verbose read json /Users/robin/Dropbox/Kiln-robin/artangel/package.json
+7 verbose cache add [ 'hiredis', null ]
+8 verbose cache add name=undefined spec="hiredis" args=["hiredis",null]
+9 verbose parsed url { pathname: 'hiredis', path: 'hiredis', href: 'hiredis' }
+10 verbose cache add [ 'redis', null ]
+11 verbose cache add name=undefined spec="redis" args=["redis",null]
+12 verbose parsed url { pathname: 'redis', path: 'redis', href: 'redis' }
+13 silly lockFile 66e3de35-hiredis hiredis
+14 verbose lock hiredis /Users/robin/.npm/66e3de35-hiredis.lock
+15 silly lockFile b840fc02-redis redis
+16 verbose lock redis /Users/robin/.npm/b840fc02-redis.lock
+17 silly lockFile 66e3de35-hiredis hiredis
+18 silly lockFile b840fc02-redis redis
+19 verbose addNamed [ 'hiredis', '' ]
+20 verbose addNamed [ null, '' ]
+21 silly lockFile dc014615-hiredis hiredis@
+22 verbose lock hiredis@ /Users/robin/.npm/dc014615-hiredis.lock
+23 verbose addNamed [ 'redis', '' ]
+24 verbose addNamed [ null, '' ]
+25 silly lockFile fb3bbc27-redis redis@
+26 verbose lock redis@ /Users/robin/.npm/fb3bbc27-redis.lock
+27 silly addNameRange { name: 'hiredis', range: '', hasData: false }
+28 silly addNameRange { name: 'redis', range: '', hasData: false }
+29 verbose url raw hiredis
+30 verbose url resolving [ 'https://registry.npmjs.org/', './hiredis' ]
+31 verbose url resolved https://registry.npmjs.org/hiredis
+32 info trying registry request attempt 1 at 11:05:34
+33 http GET https://registry.npmjs.org/hiredis
+34 verbose url raw redis
+35 verbose url resolving [ 'https://registry.npmjs.org/', './redis' ]
+36 verbose url resolved https://registry.npmjs.org/redis
+37 info trying registry request attempt 1 at 11:05:34
+38 verbose etag "6M87M3LM6Z4V6WYWQYE6YH29"
+39 http GET https://registry.npmjs.org/redis
+40 http 304 https://registry.npmjs.org/redis
+41 silly registry.get cb [ 304,
+41 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+41 silly registry.get     etag: '"6M87M3LM6Z4V6WYWQYE6YH29"',
+41 silly registry.get     date: 'Wed, 05 Jun 2013 10:05:29 GMT',
+41 silly registry.get     'content-length': '0' } ]
+42 verbose etag redis from cache
+43 silly addNameRange number 2 { name: 'redis', range: '', hasData: true }
+44 silly addNameRange versions [ 'redis',
+44 silly addNameRange   [ '0.0.1',
+44 silly addNameRange     '0.0.2',
+44 silly addNameRange     '0.0.3',
+44 silly addNameRange     '0.0.4',
+44 silly addNameRange     '0.0.7',
+44 silly addNameRange     '0.0.8',
+44 silly addNameRange     '0.1.0',
+44 silly addNameRange     '0.1.1',
+44 silly addNameRange     '0.1.2',
+44 silly addNameRange     '0.2.0',
+44 silly addNameRange     '0.2.1',
+44 silly addNameRange     '0.2.2',
+44 silly addNameRange     '0.2.3',
+44 silly addNameRange     '0.2.4',
+44 silly addNameRange     '0.2.6',
+44 silly addNameRange     '0.3.0',
+44 silly addNameRange     '0.3.1',
+44 silly addNameRange     '0.3.2',
+44 silly addNameRange     '0.3.3',
+44 silly addNameRange     '0.3.4',
+44 silly addNameRange     '0.3.5',
+44 silly addNameRange     '0.3.6',
+44 silly addNameRange     '0.3.7',
+44 silly addNameRange     '0.3.9',
+44 silly addNameRange     '0.4.0',
+44 silly addNameRange     '0.4.1',
+44 silly addNameRange     '0.4.2',
+44 silly addNameRange     '0.5.0',
+44 silly addNameRange     '0.5.1',
+44 silly addNameRange     '0.5.2',
+44 silly addNameRange     '0.5.3',
+44 silly addNameRange     '0.5.4',
+44 silly addNameRange     '0.5.5',
+44 silly addNameRange     '0.5.6',
+44 silly addNameRange     '0.5.7',
+44 silly addNameRange     '0.5.8',
+44 silly addNameRange     '0.5.9',
+44 silly addNameRange     '0.5.10',
+44 silly addNameRange     '0.5.11',
+44 silly addNameRange     '0.6.0',
+44 silly addNameRange     '0.6.1',
+44 silly addNameRange     '0.6.2',
+44 silly addNameRange     '0.6.3',
+44 silly addNameRange     '0.6.4',
+44 silly addNameRange     '0.6.5',
+44 silly addNameRange     '0.6.6',
+44 silly addNameRange     '0.6.7',
+44 silly addNameRange     '0.7.0',
+44 silly addNameRange     '0.7.1',
+44 silly addNameRange     '0.7.2',
+44 silly addNameRange     '0.7.3',
+44 silly addNameRange     '0.8.0',
+44 silly addNameRange     '0.8.1',
+44 silly addNameRange     '0.8.2',
+44 silly addNameRange     '0.8.3' ] ]
+45 verbose addNamed [ 'redis', '0.8.3' ]
+46 verbose addNamed [ '0.8.3', '0.8.3' ]
+47 silly lockFile 3ea236b3-redis-0-8-3 redis@0.8.3
+48 verbose lock redis@0.8.3 /Users/robin/.npm/3ea236b3-redis-0-8-3.lock
+49 verbose read json /Users/robin/.npm/redis/0.8.3/package/package.json
+50 silly lockFile 3ea236b3-redis-0-8-3 redis@0.8.3
+51 silly lockFile fb3bbc27-redis redis@
+52 http 200 https://registry.npmjs.org/hiredis
+53 silly registry.get cb [ 200,
+53 silly registry.get   { vary: 'Accept',
+53 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+53 silly registry.get     etag: '"5DUTB10MJSI7RL02V9KA1CZKG"',
+53 silly registry.get     date: 'Wed, 05 Jun 2013 10:05:29 GMT',
+53 silly registry.get     'content-type': 'application/json',
+53 silly registry.get     'content-length': '14286' } ]
+54 silly addNameRange number 2 { name: 'hiredis', range: '', hasData: true }
+55 silly addNameRange versions [ 'hiredis',
+55 silly addNameRange   [ '0.1.0',
+55 silly addNameRange     '0.1.1',
+55 silly addNameRange     '0.1.2',
+55 silly addNameRange     '0.1.3',
+55 silly addNameRange     '0.1.4',
+55 silly addNameRange     '0.1.5',
+55 silly addNameRange     '0.1.6',
+55 silly addNameRange     '0.1.8',
+55 silly addNameRange     '0.1.9',
+55 silly addNameRange     '0.1.10',
+55 silly addNameRange     '0.1.12',
+55 silly addNameRange     '0.1.13',
+55 silly addNameRange     '0.1.14',
+55 silly addNameRange     '0.1.15' ] ]
+56 verbose addNamed [ 'hiredis', '0.1.15' ]
+57 verbose addNamed [ '0.1.15', '0.1.15' ]
+58 silly lockFile 7ce4b3b8-hiredis-0-1-15 hiredis@0.1.15
+59 verbose lock hiredis@0.1.15 /Users/robin/.npm/7ce4b3b8-hiredis-0-1-15.lock
+60 silly lockFile c46fd54b-s-org-hiredis-hiredis-0-1-15-tgz https://registry.npmjs.org/hiredis/-/hiredis-0.1.15.tgz
+61 verbose lock https://registry.npmjs.org/hiredis/-/hiredis-0.1.15.tgz /Users/robin/.npm/c46fd54b-s-org-hiredis-hiredis-0-1-15-tgz.lock
+62 verbose addRemoteTarball [ 'https://registry.npmjs.org/hiredis/-/hiredis-0.1.15.tgz',
+62 verbose addRemoteTarball   '00eb2205c85dcf50de838203e513896dc304dd49' ]
+63 info retry fetch attempt 1 at 11:05:35
+64 verbose fetch to= /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/tmp.tgz
+65 http GET https://registry.npmjs.org/hiredis/-/hiredis-0.1.15.tgz
+66 http 200 https://registry.npmjs.org/hiredis/-/hiredis-0.1.15.tgz
+67 silly shasum updated bytes 40960
+68 silly shasum updated bytes 6471
+69 info shasum 00eb2205c85dcf50de838203e513896dc304dd49
+69 info shasum /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/tmp.tgz
+70 verbose tar unpack /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/tmp.tgz
+71 silly lockFile d257ab5f-35555-0-7034920898731798-package /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/package
+72 verbose lock /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/package /Users/robin/.npm/d257ab5f-35555-0-7034920898731798-package.lock
+73 silly gunzTarPerm modes [ '755', '644' ]
+74 silly gunzTarPerm extractEntry package.json
+75 silly gunzTarPerm extractEntry README.md
+76 silly gunzTarPerm extractEntry bench.js
+77 silly gunzTarPerm extractEntry hiredis.js
+78 silly gunzTarPerm extractEntry binding.gyp
+79 silly gunzTarPerm extractEntry COPYING
+80 silly gunzTarPerm extractEntry deps/hiredis/README.md
+81 silly gunzTarPerm extractEntry deps/hiredis/example.c
+82 silly gunzTarPerm extractEntry deps/hiredis/async.h
+83 silly gunzTarPerm extractEntry deps/hiredis/CHANGELOG.md
+84 silly gunzTarPerm extractEntry deps/hiredis/COPYING
+85 silly gunzTarPerm extractEntry deps/hiredis/dict.c
+86 silly gunzTarPerm extractEntry deps/hiredis/dict.h
+87 silly gunzTarPerm extractEntry deps/hiredis/example-ae.c
+88 silly gunzTarPerm extractEntry deps/hiredis/example-libev.c
+89 silly gunzTarPerm extractEntry deps/hiredis/example-libevent.c
+90 silly gunzTarPerm extractEntry deps/hiredis/async.c
+91 silly gunzTarPerm extractEntry deps/hiredis/fmacros.h
+92 silly gunzTarPerm extractEntry deps/hiredis/hiredis.c
+93 silly gunzTarPerm extractEntry deps/hiredis/hiredis.h
+94 silly gunzTarPerm extractEntry deps/hiredis/Makefile
+95 silly gunzTarPerm extractEntry deps/hiredis/net.c
+96 silly gunzTarPerm extractEntry deps/hiredis/net.h
+97 silly gunzTarPerm extractEntry deps/hiredis/adapters/ae.h
+98 silly gunzTarPerm extractEntry deps/hiredis/adapters/libev.h
+99 silly gunzTarPerm extractEntry deps/hiredis/adapters/libevent.h
+100 silly gunzTarPerm extractEntry deps/hiredis/sds.c
+101 silly gunzTarPerm extractEntry deps/hiredis/sds.h
+102 silly gunzTarPerm extractEntry deps/hiredis/test.c
+103 silly gunzTarPerm extractEntry deps/hiredis.gyp
+104 silly gunzTarPerm extractEntry src/hiredis.cc
+105 silly gunzTarPerm extractEntry src/reader.cc
+106 silly gunzTarPerm extractEntry src/reader.h
+107 silly gunzTarPerm extractEntry test/reader.js
+108 verbose read json /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/package/package.json
+109 silly lockFile d257ab5f-35555-0-7034920898731798-package /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/package
+110 verbose from cache /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/package/package.json
+111 verbose tar pack [ '/Users/robin/.npm/hiredis/0.1.15/package.tgz',
+111 verbose tar pack   '/var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/package' ]
+112 verbose tarball /Users/robin/.npm/hiredis/0.1.15/package.tgz
+113 verbose folder /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426735555-0.7034920898731798/package
+114 silly lockFile 54b3a102-n-npm-hiredis-0-1-15-package-tgz /Users/robin/.npm/hiredis/0.1.15/package.tgz
+115 verbose lock /Users/robin/.npm/hiredis/0.1.15/package.tgz /Users/robin/.npm/54b3a102-n-npm-hiredis-0-1-15-package-tgz.lock
+116 silly lockFile 54b3a102-n-npm-hiredis-0-1-15-package-tgz /Users/robin/.npm/hiredis/0.1.15/package.tgz
+117 silly lockFile 328b392f-robin-npm-hiredis-0-1-15-package /Users/robin/.npm/hiredis/0.1.15/package
+118 verbose lock /Users/robin/.npm/hiredis/0.1.15/package /Users/robin/.npm/328b392f-robin-npm-hiredis-0-1-15-package.lock
+119 silly lockFile 328b392f-robin-npm-hiredis-0-1-15-package /Users/robin/.npm/hiredis/0.1.15/package
+120 verbose tar unpack /Users/robin/.npm/hiredis/0.1.15/package.tgz
+121 silly lockFile 328b392f-robin-npm-hiredis-0-1-15-package /Users/robin/.npm/hiredis/0.1.15/package
+122 verbose lock /Users/robin/.npm/hiredis/0.1.15/package /Users/robin/.npm/328b392f-robin-npm-hiredis-0-1-15-package.lock
+123 silly gunzTarPerm modes [ '755', '644' ]
+124 silly gunzTarPerm extractEntry package.json
+125 silly gunzTarPerm extractEntry README.md
+126 silly gunzTarPerm extractEntry bench.js
+127 silly gunzTarPerm extractEntry hiredis.js
+128 silly gunzTarPerm extractEntry binding.gyp
+129 silly gunzTarPerm extractEntry COPYING
+130 silly gunzTarPerm extractEntry deps/hiredis/README.md
+131 silly gunzTarPerm extractEntry deps/hiredis/example.c
+132 silly gunzTarPerm extractEntry deps/hiredis/async.h
+133 silly gunzTarPerm extractEntry deps/hiredis/CHANGELOG.md
+134 silly gunzTarPerm extractEntry deps/hiredis/COPYING
+135 silly gunzTarPerm extractEntry deps/hiredis/dict.c
+136 silly gunzTarPerm extractEntry deps/hiredis/dict.h
+137 silly gunzTarPerm extractEntry deps/hiredis/example-ae.c
+138 silly gunzTarPerm extractEntry deps/hiredis/example-libev.c
+139 silly gunzTarPerm extractEntry deps/hiredis/example-libevent.c
+140 silly gunzTarPerm extractEntry deps/hiredis/async.c
+141 silly gunzTarPerm extractEntry deps/hiredis/fmacros.h
+142 silly gunzTarPerm extractEntry deps/hiredis/hiredis.c
+143 silly gunzTarPerm extractEntry deps/hiredis/hiredis.h
+144 silly gunzTarPerm extractEntry deps/hiredis/Makefile
+145 silly gunzTarPerm extractEntry deps/hiredis/net.c
+146 silly gunzTarPerm extractEntry deps/hiredis/net.h
+147 silly gunzTarPerm extractEntry deps/hiredis/adapters/ae.h
+148 silly gunzTarPerm extractEntry deps/hiredis/adapters/libev.h
+149 silly gunzTarPerm extractEntry deps/hiredis/adapters/libevent.h
+150 silly gunzTarPerm extractEntry deps/hiredis/sds.c
+151 silly gunzTarPerm extractEntry deps/hiredis/sds.h
+152 silly gunzTarPerm extractEntry deps/hiredis/test.c
+153 silly gunzTarPerm extractEntry deps/hiredis.gyp
+154 silly gunzTarPerm extractEntry src/hiredis.cc
+155 silly gunzTarPerm extractEntry src/reader.cc
+156 silly gunzTarPerm extractEntry src/reader.h
+157 silly gunzTarPerm extractEntry test/reader.js
+158 verbose read json /Users/robin/.npm/hiredis/0.1.15/package/package.json
+159 silly lockFile 328b392f-robin-npm-hiredis-0-1-15-package /Users/robin/.npm/hiredis/0.1.15/package
+160 silly shasum updated bytes 40960
+161 silly shasum updated bytes 6471
+162 info shasum 00eb2205c85dcf50de838203e513896dc304dd49
+162 info shasum /Users/robin/.npm/hiredis/0.1.15/package.tgz
+163 verbose from cache /Users/robin/.npm/hiredis/0.1.15/package/package.json
+164 verbose chmod /Users/robin/.npm/hiredis/0.1.15/package.tgz 644
+165 verbose chown /Users/robin/.npm/hiredis/0.1.15/package.tgz [ 501, 80 ]
+166 silly lockFile c46fd54b-s-org-hiredis-hiredis-0-1-15-tgz https://registry.npmjs.org/hiredis/-/hiredis-0.1.15.tgz
+167 silly lockFile 7ce4b3b8-hiredis-0-1-15 hiredis@0.1.15
+168 silly lockFile dc014615-hiredis hiredis@
+169 silly resolved [ { name: 'redis',
+169 silly resolved     version: '0.8.3',
+169 silly resolved     description: 'Redis client library',
+169 silly resolved     keywords: [ 'redis', 'database' ],
+169 silly resolved     author: { name: 'Matt Ranney', email: 'mjr@ranney.com' },
+169 silly resolved     main: './index.js',
+169 silly resolved     scripts: { test: 'node ./test.js' },
+169 silly resolved     devDependencies: { metrics: '>=0.1.5', colors: '~0.6.0-1', underscore: '~1.4.4' },
+169 silly resolved     repository: { type: 'git', url: 'git://github.com/mranney/node_redis.git' },
+169 silly resolved     readme: 'redis - a node.js redis client\n===========================\n\nThis is a complete Redis client for node.js.  It supports all Redis commands, including many recently added commands like EVAL from\nexperimental Redis server branches.\n\n\nInstall with:\n\n    npm install redis\n\nPieter Noordhuis has provided a binding to the official `hiredis` C library, which is non-blocking and fast.  To use `hiredis`, do:\n\n    npm install hiredis redis\n\nIf `hiredis` is installed, `node_redis` will use it by default.  Otherwise, a pure JavaScript parser will be used.\n\nIf you use `hiredis`, be sure to rebuild it whenever you upgrade your version of node.  There are mysterious failures that can\nhappen between node and native code modules after a node upgrade.\n\n\n## Usage\n\nSimple example, included as `examples/simple.js`:\n\n```js\n    var redis = require("redis"),\n        client = redis.createClient();\n\n    // if you\'d like to select database 3, instead of 0 (default), call\n    // client.select(3, function() { /* ... */ });\n\n    client.on("error", function (err) {\n        console.log("Error " + err);\n    });\n\n    client.set("string key", "string val", redis.print);\n    client.hset("hash key", "hashtest 1", "some value", redis.print);\n    client.hset(["hash key", "hashtest 2", "some other value"], redis.print);\n    client.hkeys("hash key", function (err, replies) {\n        console.log(replies.length + " replies:");\n        replies.forEach(function (reply, i) {\n            console.log("    " + i + ": " + reply);\n        });\n        client.quit();\n    });\n```\n\nThis will display:\n\n    mjr:~/work/node_redis (master)$ node example.js\n    Reply: OK\n    Reply: 0\n    Reply: 0\n    2 replies:\n        0: hashtest 1\n        1: hashtest 2\n    mjr:~/work/node_redis (master)$\n\n\n## Performance\n\nHere are typical results of `multi_bench.js` which is similar to `redis-benchmark` from the Redis distribution.\nIt uses 50 concurrent connections with no pipelining.\n\nJavaScript parser:\n\n    PING: 20000 ops 42283.30 ops/sec 0/5/1.182\n    SET: 20000 ops 32948.93 ops/sec 1/7/1.515\n    GET: 20000 ops 28694.40 ops/sec 0/9/1.740\n    INCR: 20000 ops 39370.08 ops/sec 0/8/1.269\n    LPUSH: 20000 ops 36429.87 ops/sec 0/8/1.370\n    LRANGE (10 elements): 20000 ops 9891.20 ops/sec 1/9/5.048\n    LRANGE (100 elements): 20000 ops 1384.56 ops/sec 10/91/36.072\n\nhiredis parser:\n\n    PING: 20000 ops 46189.38 ops/sec 1/4/1.082\n    SET: 20000 ops 41237.11 ops/sec 0/6/1.210\n    GET: 20000 ops 39682.54 ops/sec 1/7/1.257\n    INCR: 20000 ops 40080.16 ops/sec 0/8/1.242\n    LPUSH: 20000 ops 41152.26 ops/sec 0/3/1.212\n    LRANGE (10 elements): 20000 ops 36563.07 ops/sec 1/8/1.363\n    LRANGE (100 elements): 20000 ops 21834.06 ops/sec 0/9/2.287\n\nThe performance of `node_redis` improves dramatically with pipelining, which happens automatically in most normal programs.\n\n\n### Sending Commands\n\nEach Redis command is exposed as a function on the `client` object.\nAll functions take either an `args` Array plus optional `callback` Function or\na variable number of individual arguments followed by an optional callback.\nHere is an example of passing an array of arguments and a callback:\n\n    client.mset(["test keys 1", "test val 1", "test keys 2", "test val 2"], function (err, res) {});\n\nHere is that same call in the second style:\n\n    client.mset("test keys 1", "test val 1", "test keys 2", "test val 2", function (err, res) {});\n\nNote that in either form the `callback` is optional:\n\n    client.set("some key", "some val");\n    client.set(["some other key", "some val"]);\n\nIf the key is missing, reply will be null (probably):\n\n    client.get("missingkey", function(err, reply) {\n        // reply is null when the key is missing\n        console.log(reply);\n    });\n\nFor a list of Redis commands, see [Redis Command Reference](http://redis.io/commands)\n\nThe commands can be specified in uppercase or lowercase for convenience.  `client.get()` is the same as `client.GET()`.\n\nMinimal parsing is done on the replies.  Commands that return a single line reply return JavaScript Strings,\ninteger replies return JavaScript Numbers, "bulk" replies return node Buffers, and "multi bulk" replies return a\nJavaScript Array of node Buffers.  `HGETALL` returns an Object with Buffers keyed by the hash keys.\n\n# API\n\n## Connection Events\n\n`client` will emit some events about the state of the connection to the Redis server.\n\n### "ready"\n\n`client` will emit `ready` a connection is established to the Redis server and the server reports\nthat it is ready to receive commands.  Commands issued before the `ready` event are queued,\nthen replayed just before this event is emitted.\n\n### "connect"\n\n`client` will emit `connect` at the same time as it emits `ready` unless `client.options.no_ready_check`\nis set.  If this options is set, `connect` will be emitted when the stream is connected, and then\nyou are free to try to send commands.\n\n### "error"\n\n`client` will emit `error` when encountering an error connecting to the Redis server.\n\nNote that "error" is a special event type in node.  If there are no listeners for an\n"error" event, node will exit.  This is usually what you want, but it can lead to some\ncryptic error messages like this:\n\n    mjr:~/work/node_redis (master)$ node example.js\n\n    node.js:50\n        throw e;\n        ^\n    Error: ECONNREFUSED, Connection refused\n        at IOWatcher.callback (net:870:22)\n        at node.js:607:9\n\nNot very useful in diagnosing the problem, but if your program isn\'t ready to handle this,\nit is probably the right thing to just exit.\n\n`client` will also emit `error` if an exception is thrown inside of `node_redis` for whatever reason.\nIt would be nice to distinguish these two cases.\n\n### "end"\n\n`client` will emit `end` when an established Redis server connection has closed.\n\n### "drain"\n\n`client` will emit `drain` when the TCP connection to the Redis server has been buffering, but is now\nwritable.  This event can be used to stream commands in to Redis and adapt to backpressure.  Right now,\nyou need to check `client.command_queue.length` to decide when to reduce your send rate.  Then you can\nresume sending when you get `drain`.\n\n### "idle"\n\n`client` will emit `idle` when there are no outstanding commands that are awaiting a response.\n\n## redis.createClient(port, host, options)\n\nCreate a new client connection.  `port` defaults to `6379` and `host` defaults\nto `127.0.0.1`.  If you have `redis-server` running on the same computer as node, then the defaults for\nport and host are probably fine.  `options` in an object with the following possible properties:\n\n* `parser`: which Redis protocol reply parser to use.  Defaults to `hiredis` if that module is installed.\nThis may also be set to `javascript`.\n* `return_buffers`: defaults to `false`.  If set to `true`, then all replies will be sent to callbacks as node Buffer\nobjects instead of JavaScript Strings.\n* `detect_buffers`: default to `false`. If set to `true`, then replies will be sent to callbacks as node Buffer objects\nif any of the input arguments to the original command were Buffer objects.\nThis option lets you switch between Buffers and Strings on a per-command basis, whereas `return_buffers` applies to\nevery command on a client.\n* `socket_nodelay`: defaults to `true`. Whether to call setNoDelay() on the TCP stream, which disables the\nNagle algorithm on the underlying socket.  Setting this option to `false` can result in additional throughput at the\ncost of more latency.  Most applications will want this set to `true`.\n* `no_ready_check`: defaults to `false`. When a connection is established to the Redis server, the server might still\nbe loading the database from disk.  While loading, the server not respond to any commands.  To work around this,\n`node_redis` has a "ready check" which sends the `INFO` command to the server.  The response from the `INFO` command\nindicates whether the server is ready for more commands.  When ready, `node_redis` emits a `ready` event.\nSetting `no_ready_check` to `true` will inhibit this check.\n* `enable_offline_queue`: defaults to `true`. By default, if there is no active\nconnection to the redis server, commands are added to a queue and are executed\nonce the connection has been established. Setting `enable_offline_queue` to\n`false` will disable this feature and the callback will be execute immediately\nwith an error, or an error will be thrown if no callback is specified.\n* `retry_max_delay`: defaults to `null`. By default every time the client tries to connect and fails time before\nreconnection (delay) almost doubles. This delay normally grows infinitely, but setting `retry_max_delay` limits delay\nto maximum value, provided in milliseconds.\n* `connect_timeout` defaults to `false`. By default client will try reconnecting until connected. Setting `connect_timeout`\nlimits total time for client to reconnect. Value is provided in milliseconds and is counted once the disconnect occured.\n* `max_attempts` defaults to `null`. By default client will try reconnecting until connected. Setting `max_attempts`\nlimits total amount of reconnects.\n\n```js\n    var redis = require("redis"),\n        client = redis.createClient(null, null, {detect_buffers: true});\n\n    client.set("foo_rand000000000000", "OK");\n\n    // This will return a JavaScript String\n    client.get("foo_rand000000000000", function (err, reply) {\n        console.log(reply.toString()); // Will print `OK`\n    });\n\n    // This will return a Buffer since original key is specified as a Buffer\n    client.get(new Buffer("foo_rand000000000000"), function (err, reply) {\n        console.log(reply.toString()); // Will print `<Buffer 4f 4b>`\n    });\n    client.end();\n```\n\n`createClient()` returns a `RedisClient` object that is named `client` in all of the examples here.\n\n## client.auth(password, callback)\n\nWhen connecting to Redis servers that require authentication, the `AUTH` command must be sent as the\nfirst command after connecting.  This can be tricky to coordinate with reconnections, the ready check,\netc.  To make this easier, `client.auth()` stashes `password` and will send it after each connection,\nincluding reconnections.  `callback` is invoked only once, after the response to the very first\n`AUTH` command sent.\nNOTE: Your call to `client.auth()` should not be inside the ready handler. If\nyou are doing this wrong, `client` will emit an error that looks\nsomething like this `Error: Ready check failed: ERR operation not permitted`.\n\n## client.end()\n\nForcibly close the connection to the Redis server.  Note that this does not wait until all replies have been parsed.\nIf you want to exit cleanly, call `client.quit()` to send the `QUIT` command after you have handled all replies.\n\nThis example closes the connection to the Redis server before the replies have been read.  You probably don\'t\nwant to do this:\n\n```js\n    var redis = require("redis"),\n        client = redis.createClient();\n\n    client.set("foo_rand000000000000", "some fantastic value");\n    client.get("foo_rand000000000000", function (err, reply) {\n        console.log(reply.toString());\n    });\n    client.end();\n```\n\n`client.end()` is useful for timeout cases where something is stuck or taking too long and you want\nto start over.\n\n## Friendlier hash commands\n\nMost Redis commands take a single String or an Array of Strings as arguments, and replies are sent back as a single String or an Array of Strings.\nWhen dealing with hash values, there are a couple of useful exceptions to this.\n\n### client.hgetall(hash)\n\nThe reply from an HGETALL command will be converted into a JavaScript Object by `node_redis`.  That way you can interact\nwith the responses using JavaScript syntax.\n\nExample:\n\n    client.hmset("hosts", "mjr", "1", "another", "23", "home", "1234");\n    client.hgetall("hosts", function (err, obj) {\n        console.dir(obj);\n    });\n\nOutput:\n\n    { mjr: \'1\', another: \'23\', home: \'1234\' }\n\n### client.hmset(hash, obj, [callback])\n\nMultiple values in a hash can be set by supplying an object:\n\n    client.HMSET(key2, {\n        "0123456789": "abcdefghij", // NOTE: key and value will be coerced to strings\n        "some manner of key": "a type of value"\n    });\n\nThe properties and values of this Object will be set as keys and values in the Redis hash.\n\n### client.hmset(hash, key1, val1, ... keyn, valn, [callback])\n\nMultiple values may also be set by supplying a list:\n\n    client.HMSET(key1, "0123456789", "abcdefghij", "some manner of key", "a type of value");\n\n\n## Publish / Subscribe\n\nHere is a simple example of the API for publish / subscribe.  This program opens two\nclient connections, subscribes to a channel on one of them, and publishes to that\nchannel on the other:\n\n```js\n    var redis = require("redis"),\n        client1 = redis.createClient(), client2 = redis.createClient(),\n        msg_count = 0;\n\n    client1.on("subscribe", function (channel, count) {\n        client2.publish("a nice channel", "I am sending a message.");\n        client2.publish("a nice channel", "I am sending a second message.");\n        client2.publish("a nice channel", "I am sending my last message.");\n    });\n\n    client1.on("message", function (channel, message) {\n        console.log("client1 channel " + channel + ": " + message);\n        msg_count += 1;\n        if (msg_count === 3) {\n            client1.unsubscribe();\n            client1.end();\n            client2.end();\n        }\n    });\n\n    client1.incr("did a thing");\n    client1.subscribe("a nice channel");\n```\n\nWhen a client issues a `SUBSCRIBE` or `PSUBSCRIBE`, that connection is put into "pub/sub" mode.\nAt that point, only commands that modify the subscription set are valid.  When the subscription\nset is empty, the connection is put back into regular mode.\n\nIf you need to send regular commands to Redis while in pub/sub mode, just open another connection.\n\n## Pub / Sub Events\n\nIf a client has subscriptions active, it may emit these events:\n\n### "message" (channel, message)\n\nClient will emit `message` for every message received that matches an active subscription.\nListeners are passed the channel name as `channel` and the message Buffer as `message`.\n\n### "pmessage" (pattern, channel, message)\n\nClient will emit `pmessage` for every message received that matches an active subscription pattern.\nListeners are passed the original pattern used with `PSUBSCRIBE` as `pattern`, the sending channel\nname as `channel`, and the message Buffer as `message`.\n\n### "subscribe" (channel, count)\n\nClient will emit `subscribe` in response to a `SUBSCRIBE` command.  Listeners are passed the\nchannel name as `channel` and the new count of subscriptions for this client as `count`.\n\n### "psubscribe" (pattern, count)\n\nClient will emit `psubscribe` in response to a `PSUBSCRIBE` command.  Listeners are passed the\noriginal pattern as `pattern`, and the new count of subscriptions for this client as `count`.\n\n### "unsubscribe" (channel, count)\n\nClient will emit `unsubscribe` in response to a `UNSUBSCRIBE` command.  Listeners are passed the\nchannel name as `channel` and the new count of subscriptions for this client as `count`.  When\n`count` is 0, this client has left pub/sub mode and no more pub/sub events will be emitted.\n\n### "punsubscribe" (pattern, count)\n\nClient will emit `punsubscribe` in response to a `PUNSUBSCRIBE` command.  Listeners are passed the\nchannel name as `channel` and the new count of subscriptions for this client as `count`.  When\n`count` is 0, this client has left pub/sub mode and no more pub/sub events will be emitted.\n\n## client.multi([commands])\n\n`MULTI` commands are queued up until an `EXEC` is issued, and then all commands are run atomically by\nRedis.  The interface in `node_redis` is to return an individual `Multi` object by calling `client.multi()`.\n\n```js\n    var redis  = require("./index"),\n        client = redis.createClient(), set_size = 20;\n\n    client.sadd("bigset", "a member");\n    client.sadd("bigset", "another member");\n\n    while (set_size > 0) {\n        client.sadd("bigset", "member " + set_size);\n        set_size -= 1;\n    }\n\n    // multi chain with an individual callback\n    client.multi()\n        .scard("bigset")\n        .smembers("bigset")\n        .keys("*", function (err, replies) {\n            // NOTE: code in this callback is NOT atomic\n            // this only happens after the the .exec call finishes.\n            client.mget(replies, redis.print);\n        })\n        .dbsize()\n        .exec(function (err, replies) {\n            console.log("MULTI got " + replies.length + " replies");\n            replies.forEach(function (reply, index) {\n                console.log("Reply " + index + ": " + reply.toString());\n            });\n        });\n```\n\n`client.multi()` is a constructor that returns a `Multi` object.  `Multi` objects share all of the\nsame command methods as `client` objects do.  Commands are queued up inside the `Multi` object\nuntil `Multi.exec()` is invoked.\n\nYou can either chain together `MULTI` commands as in the above example, or you can queue individual\ncommands while still sending regular client command as in this example:\n\n```js\n    var redis  = require("redis"),\n        client = redis.createClient(), multi;\n\n    // start a separate multi command queue\n    multi = client.multi();\n    multi.incr("incr thing", redis.print);\n    multi.incr("incr other thing", redis.print);\n\n    // runs immediately\n    client.mset("incr thing", 100, "incr other thing", 1, redis.print);\n\n    // drains multi queue and runs atomically\n    multi.exec(function (err, replies) {\n        console.log(replies); // 101, 2\n    });\n\n    // you can re-run the same transaction if you like\n    multi.exec(function (err, replies) {\n        console.log(replies); // 102, 3\n        client.quit();\n    });\n```\n\nIn addition to adding commands to the `MULTI` queue individually, you can also pass an array\nof commands and arguments to the constructor:\n\n```js\n    var redis  = require("redis"),\n        client = redis.createClient(), multi;\n\n    client.multi([\n        ["mget", "multifoo", "multibar", redis.print],\n        ["incr", "multifoo"],\n        ["incr", "multibar"]\n    ]).exec(function (err, replies) {\n        console.log(replies);\n    });\n```\n\n\n## Monitor mode\n\nRedis supports the `MONITOR` command, which lets you see all commands received by the Redis server\nacross all client connections, including from other client libraries and other computers.\n\nAfter you send the `MONITOR` command, no other commands are valid on that connection.  `node_redis`\nwill emit a `monitor` event for every new monitor message that comes across.  The callback for the\n`monitor` event takes a timestamp from the Redis server and an array of command arguments.\n\nHere is a simple example:\n\n```js\n    var client  = require("redis").createClient(),\n        util = require("util");\n\n    client.monitor(function (err, res) {\n        console.log("Entering monitoring mode.");\n    });\n\n    client.on("monitor", function (time, args) {\n        console.log(time + ": " + util.inspect(args));\n    });\n```\n\n# Extras\n\nSome other things you might like to know about.\n\n## client.server_info\n\nAfter the ready probe completes, the results from the INFO command are saved in the `client.server_info`\nobject.\n\nThe `versions` key contains an array of the elements of the version string for easy comparison.\n\n    > client.server_info.redis_version\n    \'2.3.0\'\n    > client.server_info.versions\n    [ 2, 3, 0 ]\n\n## redis.print()\n\nA handy callback function for displaying return values when testing.  Example:\n\n```js\n    var redis = require("redis"),\n        client = redis.createClient();\n\n    client.on("connect", function () {\n        client.set("foo_rand000000000000", "some fantastic value", redis.print);\n        client.get("foo_rand000000000000", redis.print);\n    });\n```\n\nThis will print:\n\n    Reply: OK\n    Reply: some fantastic value\n\nNote that this program will not exit cleanly because the client is still connected.\n\n## redis.debug_mode\n\nBoolean to enable debug mode and protocol tracing.\n\n```js\n    var redis = require("redis"),\n        client = redis.createClient();\n\n    redis.debug_mode = true;\n\n    client.on("connect", function () {\n        client.set("foo_rand000000000000", "some fantastic value");\n    });\n```\n\nThis will display:\n\n    mjr:~/work/node_redis (master)$ node ~/example.js\n    send command: *3\n    $3\n    SET\n    $20\n    foo_rand000000000000\n    $20\n    some fantastic value\n\n    on_data: +OK\n\n`send command` is data sent into Redis and `on_data` is data received from Redis.\n\n## Multi-word commands\n\nTo execute redis multi-word commands like `SCRIPT LOAD` or `CLIENT LIST` pass\nthe second word as first parameter:\n\n    client.script(\'load\', \'return 1\');\n    client.multi().script(\'load\', \'return 1\').exec(...);\n    client.multi([[\'script\', \'load\', \'return 1\']]).exec(...);\n\n## client.send_command(command_name, args, callback)\n\nUsed internally to send commands to Redis.  For convenience, nearly all commands that are published on the Redis\nWiki have been added to the `client` object.  However, if I missed any, or if new commands are introduced before\nthis library is updated, you can use `send_command()` to send arbitrary commands to Redis.\n\nAll commands are sent as multi-bulk commands.  `args` can either be an Array of arguments, or omitted.\n\n## client.connected\n\nBoolean tracking the state of the connection to the Redis server.\n\n## client.command_queue.length\n\nThe number of commands that have been sent to the Redis server but not yet replied to.  You can use this to\nenforce some kind of maximum queue depth for commands while connected.\n\nDon\'t mess with `client.command_queue` though unless you really know what you are doing.\n\n## client.offline_queue.length\n\nThe number of commands that have been queued up for a future connection.  You can use this to enforce\nsome kind of maximum queue depth for pre-connection commands.\n\n## client.retry_delay\n\nCurrent delay in milliseconds before a connection retry will be attempted.  This starts at `250`.\n\n## client.retry_backoff\n\nMultiplier for future retry timeouts.  This should be larger than 1 to add more time between retries.\nDefaults to 1.7.  The default initial connection retry is 250, so the second retry will be 425, followed by 723.5, etc.\n\n### Commands with Optional and Keyword arguments\n\nThis applies to anything that uses an optional `[WITHSCORES]` or `[LIMIT offset count]` in the [redis.io/commands](http://redis.io/commands) documentation.\n\nExample:\n```js\nvar args = [ \'myzset\', 1, \'one\', 2, \'two\', 3, \'three\', 99, \'ninety-nine\' ];\nclient.zadd(args, function (err, response) {\n    if (err) throw err;\n    console.log(\'added \'+response+\' items.\');\n\n    // -Infinity and +Infinity also work\n    var args1 = [ \'myzset\', \'+inf\', \'-inf\' ];\n    client.zrevrangebyscore(args1, function (err, response) {\n        if (err) throw err;\n        console.log(\'example1\', response);\n        // write your code here\n    });\n\n    var max = 3, min = 1, offset = 1, count = 2;\n    var args2 = [ \'myzset\', max, min, \'WITHSCORES\', \'LIMIT\', offset, count ];\n    client.zrevrangebyscore(args2, function (err, response) {\n        if (err) throw err;\n        console.log(\'example2\', response);\n        // write your code here\n    });\n});\n```\n\n## TODO\n\nBetter tests for auth, disconnect/reconnect, and all combinations thereof.\n\nStream large set/get values into and out of Redis.  Otherwise the entire value must be in node\'s memory.\n\nPerformance can be better for very large values.\n\nI think there are more performance improvements left in there for smaller values, especially for large lists of small values.\n\n## How to Contribute\n- open a pull request and then wait for feedback (if\n  [DTrejo](http://github.com/dtrejo) does not get back to you within 2 days,\n  comment again with indignation!)\n\n## Contributors\nSome people have have added features and fixed bugs in `node_redis` other than me.\n\nOrdered by date of first contribution.\n[Auto-generated](http://github.com/dtrejo/node-authors) on Wed Jul 25 2012 19:14:59 GMT-0700 (PDT).\n\n- [Matt Ranney aka `mranney`](https://github.com/mranney)\n- [Tim-Smart aka `tim-smart`](https://github.com/tim-smart)\n- [Tj Holowaychuk aka `visionmedia`](https://github.com/visionmedia)\n- [rick aka `technoweenie`](https://github.com/technoweenie)\n- [Orion Henry aka `orionz`](https://github.com/orionz)\n- [Aivo Paas aka `aivopaas`](https://github.com/aivopaas)\n- [Hank Sims aka `hanksims`](https://github.com/hanksims)\n- [Paul Carey aka `paulcarey`](https://github.com/paulcarey)\n- [Pieter Noordhuis aka `pietern`](https://github.com/pietern)\n- [nithesh aka `nithesh`](https://github.com/nithesh)\n- [Andy Ray aka `andy2ray`](https://github.com/andy2ray)\n- [unknown aka `unknowdna`](https://github.com/unknowdna)\n- [Dave Hoover aka `redsquirrel`](https://github.com/redsquirrel)\n- [Vladimir Dronnikov aka `dvv`](https://github.com/dvv)\n- [Umair Siddique aka `umairsiddique`](https://github.com/umairsiddique)\n- [Louis-Philippe Perron aka `lp`](https://github.com/lp)\n- [Mark Dawson aka `markdaws`](https://github.com/markdaws)\n- [Ian Babrou aka `bobrik`](https://github.com/bobrik)\n- [Felix Geisendörfer aka `felixge`](https://github.com/felixge)\n- [Jean-Hugues Pinson aka `undefined`](https://github.com/undefined)\n- [Maksim Lin aka `maks`](https://github.com/maks)\n- [Owen Smith aka `orls`](https://github.com/orls)\n- [Zachary Scott aka `zzak`](https://github.com/zzak)\n- [TEHEK Firefox aka `TEHEK`](https://github.com/TEHEK)\n- [Isaac Z. Schlueter aka `isaacs`](https://github.com/isaacs)\n- [David Trejo aka `DTrejo`](https://github.com/DTrejo)\n- [Brian Noguchi aka `bnoguchi`](https://github.com/bnoguchi)\n- [Philip Tellis aka `bluesmoon`](https://github.com/bluesmoon)\n- [Marcus Westin aka `marcuswestin2`](https://github.com/marcuswestin2)\n- [Jed Schmidt aka `jed`](https://github.com/jed)\n- [Dave Peticolas aka `jdavisp3`](https://github.com/jdavisp3)\n- [Trae Robrock aka `trobrock`](https://github.com/trobrock)\n- [Shankar Karuppiah aka `shankar0306`](https://github.com/shankar0306)\n- [Ignacio Burgueño aka `ignacio`](https://github.com/ignacio)\n\nThanks.\n\n## LICENSE - "MIT License"\n\nCopyright (c) 2010 Matthew Ranney, http://ranney.com/\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the "Software"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\n![spacer](http://ranney.com/1px.gif)\n',
+169 silly resolved     readmeFilename: 'README.md',
+169 silly resolved     _id: 'redis@0.8.3',
+169 silly resolved     _from: 'redis@' },
+169 silly resolved   { name: 'hiredis',
+169 silly resolved     description: 'Wrapper for reply processing code in hiredis',
+169 silly resolved     version: '0.1.15',
+169 silly resolved     homepage: 'http://github.com/pietern/hiredis-node',
+169 silly resolved     author: { name: 'Pieter Noordhuis', email: 'pcnoordhuis@gmail.com' },
+169 silly resolved     main: 'hiredis',
+169 silly resolved     scripts: { test: 'node test/reader.js', install: 'node-gyp rebuild' },
+169 silly resolved     dependencies: { bindings: '*' },
+169 silly resolved     engines: { node: '>= 0.6.0' },
+169 silly resolved     gypfile: true,
+169 silly resolved     readme: '# hiredis-node\n\nNode extension that wraps [hiredis][hiredis].\nBecause Node is already good at doing I/O, hiredis-node only provides\nbindings to the protocol parser.\nThe hiredis protocol parser is faster than JavaScript protocol parsers,\nbut the speedup only becomes noticable for large replies.\nIf you use Redis for simple SET/GET operations, there won\'t be a big\nbenefit to using hiredis.\nIf you use Redis for big SUNION/SINTER/LRANGE/ZRANGE operations, the\nbenefit to using hiredis-node can be significant.\n\n[hiredis]: http://github.com/antirez/hiredis\n\n## Install\n\nInstall with [NPM][npm]:\n\n```\nnpm install hiredis\n```\n\n[npm]: https://npmjs.org/\n\n## Usage\n\nhiredis-node works out of the box with Matt Ranney\'s [node_redis][node_redis].\nThe latter has an optional dependency on hiredis-node, so maybe you\'re\nalready using it without knowing.\n\nAlternatively, you can use it directly:\n\n```javascript\nvar hiredis = require("hiredis"),\n    reader = new hiredis.Reader();\n\n// Data comes in\nreader.feed("$5\\r\\nhello\\r\\n");\n\n// Reply comes out\nreader.get() // => "hello"\n```\n\nInstead of returning strings for bulk payloads, it can also return\nbuffers:\n\n```javascript\nvar hiredis = require("hiredis"),\n    reader = new hiredis.Reader({ return_buffers: true });\n\n// Data comes in\nreader.feed("$5\\r\\nhello\\r\\n");\n\n// Reply comes out\nreader.get() // => <Buffer 68 65 6c 6c 6f>\n```\n\n[node_redis]: http://github.com/mranney/node_redis\n\n## License\n\nThis code is released under the BSD license, after the license of hiredis.\n',
+169 silly resolved     readmeFilename: 'README.md',
+169 silly resolved     _id: 'hiredis@0.1.15',
+169 silly resolved     dist: { shasum: '00eb2205c85dcf50de838203e513896dc304dd49' },
+169 silly resolved     _from: 'hiredis@',
+169 silly resolved     _resolved: 'https://registry.npmjs.org/hiredis/-/hiredis-0.1.15.tgz' } ]
+170 info install redis@0.8.3 into /Users/robin/Dropbox/Kiln-robin/artangel
+171 info install hiredis@0.1.15 into /Users/robin/Dropbox/Kiln-robin/artangel
+172 info installOne redis@0.8.3
+173 info installOne hiredis@0.1.15
+174 verbose from cache /Users/robin/.npm/hiredis/0.1.15/package/package.json
+175 verbose from cache /Users/robin/.npm/redis/0.8.3/package/package.json
+176 info /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis unbuild
+177 verbose read json /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/package.json
+178 info /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis unbuild
+179 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis/package.json
+180 info preuninstall redis@0.8.3
+181 info uninstall redis@0.8.3
+182 verbose tar unpack /Users/robin/.npm/hiredis/0.1.15/package.tgz
+183 silly lockFile 42a2524d-in-artangel-node-modules-hiredis /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis
+184 verbose lock /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis /Users/robin/.npm/42a2524d-in-artangel-node-modules-hiredis.lock
+185 verbose true,/Users/robin/Dropbox/Kiln-robin/artangel/node_modules,/Users/robin/Dropbox/Kiln-robin/artangel/node_modules unbuild redis@0.8.3
+186 info postuninstall redis@0.8.3
+187 silly gunzTarPerm modes [ '755', '644' ]
+188 silly gunzTarPerm extractEntry package.json
+189 silly gunzTarPerm extractEntry README.md
+190 silly gunzTarPerm extractEntry bench.js
+191 verbose tar unpack /Users/robin/.npm/redis/0.8.3/package.tgz
+192 silly lockFile eabdd66f-obin-artangel-node-modules-redis /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis
+193 verbose lock /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis /Users/robin/.npm/eabdd66f-obin-artangel-node-modules-redis.lock
+194 silly gunzTarPerm modes [ '755', '644' ]
+195 silly gunzTarPerm extractEntry hiredis.js
+196 silly gunzTarPerm extractEntry binding.gyp
+197 silly gunzTarPerm extractEntry package.json
+198 silly gunzTarPerm extractEntry .npmignore
+199 silly gunzTarPerm extractEntry README.md
+200 silly gunzTarPerm extractEntry COPYING
+201 silly gunzTarPerm extractEntry deps/hiredis/README.md
+202 silly gunzTarPerm extractEntry deps/hiredis/example.c
+203 silly gunzTarPerm extractEntry diff_multi_bench_output.js
+204 silly gunzTarPerm extractEntry generate_commands.js
+205 silly gunzTarPerm extractEntry deps/hiredis/async.h
+206 silly gunzTarPerm extractEntry deps/hiredis/CHANGELOG.md
+207 silly gunzTarPerm extractEntry multi_bench.js
+208 silly gunzTarPerm extractEntry test.js
+209 silly gunzTarPerm extractEntry index.js
+210 silly gunzTarPerm extractEntry lib/commands.js
+211 silly gunzTarPerm extractEntry deps/hiredis/COPYING
+212 silly gunzTarPerm extractEntry deps/hiredis/dict.c
+213 silly gunzTarPerm extractEntry lib/queue.js
+214 silly gunzTarPerm extractEntry lib/to_array.js
+215 silly gunzTarPerm extractEntry deps/hiredis/dict.h
+216 silly gunzTarPerm extractEntry deps/hiredis/example-ae.c
+217 silly gunzTarPerm extractEntry lib/util.js
+218 silly gunzTarPerm extractEntry lib/parser/hiredis.js
+219 silly gunzTarPerm extractEntry lib/parser/javascript.js
+220 silly gunzTarPerm extractEntry deps/hiredis/example-libev.c
+221 silly gunzTarPerm extractEntry deps/hiredis/example-libevent.c
+222 silly gunzTarPerm extractEntry deps/hiredis/async.c
+223 silly gunzTarPerm extractEntry benches/buffer_bench.js
+224 silly gunzTarPerm extractEntry deps/hiredis/fmacros.h
+225 silly gunzTarPerm extractEntry benches/hiredis_parser.js
+226 silly gunzTarPerm extractEntry deps/hiredis/hiredis.c
+227 silly gunzTarPerm extractEntry benches/re_sub_test.js
+228 silly gunzTarPerm extractEntry deps/hiredis/hiredis.h
+229 silly gunzTarPerm extractEntry benches/reconnect_test.js
+230 silly gunzTarPerm extractEntry deps/hiredis/Makefile
+231 silly gunzTarPerm extractEntry benches/sub_quit_test.js
+232 silly gunzTarPerm extractEntry deps/hiredis/net.c
+233 silly gunzTarPerm extractEntry benches/stress/codec.js
+234 silly gunzTarPerm extractEntry deps/hiredis/net.h
+235 silly gunzTarPerm extractEntry deps/hiredis/adapters/ae.h
+236 silly gunzTarPerm extractEntry benches/stress/pubsub/pub.js
+237 silly gunzTarPerm extractEntry benches/stress/pubsub/server.js
+238 silly gunzTarPerm extractEntry benches/stress/pubsub/run
+239 silly gunzTarPerm extractEntry deps/hiredis/adapters/libev.h
+240 silly gunzTarPerm extractEntry deps/hiredis/adapters/libevent.h
+241 silly gunzTarPerm extractEntry benches/stress/rpushblpop/pub.js
+242 silly gunzTarPerm extractEntry benches/stress/rpushblpop/server.js
+243 silly gunzTarPerm extractEntry deps/hiredis/sds.c
+244 silly gunzTarPerm extractEntry deps/hiredis/sds.h
+245 silly gunzTarPerm extractEntry deps/hiredis/test.c
+246 silly gunzTarPerm extractEntry benches/stress/rpushblpop/run
+247 silly gunzTarPerm extractEntry benches/stress/speed/speed.js
+248 silly gunzTarPerm extractEntry benches/stress/speed/00
+249 silly gunzTarPerm extractEntry benches/stress/speed/plot
+250 silly gunzTarPerm extractEntry benches/stress/speed/size-rate.png
+251 silly gunzTarPerm extractEntry deps/hiredis.gyp
+252 silly gunzTarPerm extractEntry src/hiredis.cc
+253 silly gunzTarPerm extractEntry examples/auth.js
+254 silly gunzTarPerm extractEntry src/reader.cc
+255 silly gunzTarPerm extractEntry src/reader.h
+256 silly gunzTarPerm extractEntry examples/mget.js
+257 silly gunzTarPerm extractEntry examples/monitor.js
+258 silly gunzTarPerm extractEntry examples/multi.js
+259 silly gunzTarPerm extractEntry examples/file.js
+260 silly gunzTarPerm extractEntry examples/psubscribe.js
+261 silly gunzTarPerm extractEntry test/reader.js
+262 silly gunzTarPerm extractEntry examples/pub_sub.js
+263 silly gunzTarPerm extractEntry examples/simple.js
+264 silly gunzTarPerm extractEntry examples/sort.js
+265 silly gunzTarPerm extractEntry examples/subqueries.js
+266 silly gunzTarPerm extractEntry examples/extend.js
+267 silly gunzTarPerm extractEntry examples/subquery.js
+268 silly gunzTarPerm extractEntry examples/eval.js
+269 silly gunzTarPerm extractEntry examples/unix_socket.js
+270 silly gunzTarPerm extractEntry examples/backpressure_drain.js
+271 silly gunzTarPerm extractEntry examples/web_server.js
+272 silly gunzTarPerm extractEntry examples/multi2.js
+273 silly gunzTarPerm extractEntry changelog.md
+274 verbose read json /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/package.json
+275 silly lockFile 42a2524d-in-artangel-node-modules-hiredis /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis
+276 info preinstall hiredis@0.1.15
+277 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/package.json
+278 verbose readDependencies using package.json deps
+279 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/package.json
+280 verbose readDependencies using package.json deps
+281 verbose cache add [ 'bindings@*', null ]
+282 verbose cache add name=undefined spec="bindings@*" args=["bindings@*",null]
+283 verbose parsed url { pathname: 'bindings@*',
+283 verbose parsed url   path: 'bindings@*',
+283 verbose parsed url   href: 'bindings@*' }
+284 verbose cache add name="bindings" spec="*" args=["bindings","*"]
+285 verbose parsed url { pathname: '*', path: '*', href: '*' }
+286 verbose addNamed [ 'bindings', '*' ]
+287 verbose addNamed [ null, '' ]
+288 silly lockFile a3858fc2-bindings bindings@*
+289 verbose lock bindings@* /Users/robin/.npm/a3858fc2-bindings.lock
+290 silly addNameRange { name: 'bindings', range: '', hasData: false }
+291 verbose url raw bindings
+292 verbose url resolving [ 'https://registry.npmjs.org/', './bindings' ]
+293 verbose url resolved https://registry.npmjs.org/bindings
+294 info trying registry request attempt 1 at 11:05:37
+295 verbose etag "3WL7HFFDQVC7PQVU63C20ATKP"
+296 http GET https://registry.npmjs.org/bindings
+297 verbose read json /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis/package.json
+298 silly lockFile eabdd66f-obin-artangel-node-modules-redis /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis
+299 info preinstall redis@0.8.3
+300 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis/package.json
+301 verbose readDependencies using package.json deps
+302 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis/package.json
+303 verbose readDependencies using package.json deps
+304 silly resolved []
+305 verbose about to build /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis
+306 info build /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis
+307 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/redis/package.json
+308 verbose linkStuff [ false,
+308 verbose linkStuff   false,
+308 verbose linkStuff   false,
+308 verbose linkStuff   '/Users/robin/Dropbox/Kiln-robin/artangel/node_modules' ]
+309 info linkStuff redis@0.8.3
+310 verbose linkBins redis@0.8.3
+311 verbose linkMans redis@0.8.3
+312 verbose rebuildBundles redis@0.8.3
+313 info install redis@0.8.3
+314 info postinstall redis@0.8.3
+315 http 200 https://registry.npmjs.org/bindings
+316 silly registry.get cb [ 200,
+316 silly registry.get   { vary: 'Accept',
+316 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+316 silly registry.get     etag: '"CFVJVT1GCZS3UUVQEXZASBJH7"',
+316 silly registry.get     date: 'Wed, 05 Jun 2013 10:05:32 GMT',
+316 silly registry.get     'content-type': 'application/json',
+316 silly registry.get     'content-length': '27722' } ]
+317 silly addNameRange number 2 { name: 'bindings', range: '', hasData: true }
+318 silly addNameRange versions [ 'bindings',
+318 silly addNameRange   [ '0.0.1',
+318 silly addNameRange     '0.1.0',
+318 silly addNameRange     '0.1.1',
+318 silly addNameRange     '0.2.0',
+318 silly addNameRange     '0.2.1',
+318 silly addNameRange     '0.2.2',
+318 silly addNameRange     '0.2.3',
+318 silly addNameRange     '0.2.4',
+318 silly addNameRange     '0.3.0',
+318 silly addNameRange     '0.4.0',
+318 silly addNameRange     '1.0.0',
+318 silly addNameRange     '1.1.0' ] ]
+319 verbose addNamed [ 'bindings', '1.1.0' ]
+320 verbose addNamed [ '1.1.0', '1.1.0' ]
+321 silly lockFile ff2d1960-bindings-1-1-0 bindings@1.1.0
+322 verbose lock bindings@1.1.0 /Users/robin/.npm/ff2d1960-bindings-1-1-0.lock
+323 silly lockFile c64a0f45--org-bindings-bindings-1-1-0-tgz https://registry.npmjs.org/bindings/-/bindings-1.1.0.tgz
+324 verbose lock https://registry.npmjs.org/bindings/-/bindings-1.1.0.tgz /Users/robin/.npm/c64a0f45--org-bindings-bindings-1-1-0-tgz.lock
+325 verbose addRemoteTarball [ 'https://registry.npmjs.org/bindings/-/bindings-1.1.0.tgz',
+325 verbose addRemoteTarball   'f3cc4deec19fe31f255864eb1e6ffad857266ef0' ]
+326 info retry fetch attempt 1 at 11:05:39
+327 verbose fetch to= /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/tmp.tgz
+328 http GET https://registry.npmjs.org/bindings/-/bindings-1.1.0.tgz
+329 http 200 https://registry.npmjs.org/bindings/-/bindings-1.1.0.tgz
+330 silly shasum updated bytes 3481
+331 info shasum f3cc4deec19fe31f255864eb1e6ffad857266ef0
+331 info shasum /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/tmp.tgz
+332 verbose tar unpack /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/tmp.tgz
+333 silly lockFile 398c9ad0-128-0-027233765460550785-package /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/package
+334 verbose lock /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/package /Users/robin/.npm/398c9ad0-128-0-027233765460550785-package.lock
+335 silly gunzTarPerm modes [ '755', '644' ]
+336 silly gunzTarPerm extractEntry package.json
+337 silly gunzTarPerm extractEntry README.md
+338 silly gunzTarPerm extractEntry bindings.js
+339 verbose read json /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/package/package.json
+340 silly lockFile 398c9ad0-128-0-027233765460550785-package /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/package
+341 verbose from cache /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/package/package.json
+342 verbose tar pack [ '/Users/robin/.npm/bindings/1.1.0/package.tgz',
+342 verbose tar pack   '/var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/package' ]
+343 verbose tarball /Users/robin/.npm/bindings/1.1.0/package.tgz
+344 verbose folder /var/folders/2l/91gdy5qn6wx3n91k7njh_sqm0000gn/T/npm-2717/1370426739128-0.027233765460550785/package
+345 silly lockFile 72ba3aa9-n-npm-bindings-1-1-0-package-tgz /Users/robin/.npm/bindings/1.1.0/package.tgz
+346 verbose lock /Users/robin/.npm/bindings/1.1.0/package.tgz /Users/robin/.npm/72ba3aa9-n-npm-bindings-1-1-0-package-tgz.lock
+347 silly lockFile 72ba3aa9-n-npm-bindings-1-1-0-package-tgz /Users/robin/.npm/bindings/1.1.0/package.tgz
+348 silly lockFile 4e8e40d7-robin-npm-bindings-1-1-0-package /Users/robin/.npm/bindings/1.1.0/package
+349 verbose lock /Users/robin/.npm/bindings/1.1.0/package /Users/robin/.npm/4e8e40d7-robin-npm-bindings-1-1-0-package.lock
+350 silly lockFile 4e8e40d7-robin-npm-bindings-1-1-0-package /Users/robin/.npm/bindings/1.1.0/package
+351 verbose tar unpack /Users/robin/.npm/bindings/1.1.0/package.tgz
+352 silly lockFile 4e8e40d7-robin-npm-bindings-1-1-0-package /Users/robin/.npm/bindings/1.1.0/package
+353 verbose lock /Users/robin/.npm/bindings/1.1.0/package /Users/robin/.npm/4e8e40d7-robin-npm-bindings-1-1-0-package.lock
+354 silly gunzTarPerm modes [ '755', '644' ]
+355 silly gunzTarPerm extractEntry package.json
+356 silly gunzTarPerm extractEntry README.md
+357 silly gunzTarPerm extractEntry bindings.js
+358 verbose read json /Users/robin/.npm/bindings/1.1.0/package/package.json
+359 silly lockFile 4e8e40d7-robin-npm-bindings-1-1-0-package /Users/robin/.npm/bindings/1.1.0/package
+360 silly shasum updated bytes 3481
+361 info shasum f3cc4deec19fe31f255864eb1e6ffad857266ef0
+361 info shasum /Users/robin/.npm/bindings/1.1.0/package.tgz
+362 verbose from cache /Users/robin/.npm/bindings/1.1.0/package/package.json
+363 verbose chmod /Users/robin/.npm/bindings/1.1.0/package.tgz 644
+364 verbose chown /Users/robin/.npm/bindings/1.1.0/package.tgz [ 501, 80 ]
+365 silly lockFile c64a0f45--org-bindings-bindings-1-1-0-tgz https://registry.npmjs.org/bindings/-/bindings-1.1.0.tgz
+366 silly lockFile ff2d1960-bindings-1-1-0 bindings@1.1.0
+367 silly lockFile a3858fc2-bindings bindings@*
+368 silly resolved [ { name: 'bindings',
+368 silly resolved     description: 'Helper module for loading your native module\'s .node file',
+368 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+368 silly resolved     version: '1.1.0',
+368 silly resolved     author:
+368 silly resolved      { name: 'Nathan Rajlich',
+368 silly resolved        email: 'nathan@tootallnate.net',
+368 silly resolved        url: 'http://tootallnate.net' },
+368 silly resolved     repository:
+368 silly resolved      { type: 'git',
+368 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+368 silly resolved     main: './bindings.js',
+368 silly resolved     readme: 'node-bindings\n=============\n### Helper module for loading your native module\'s .node file\n\nThis is a helper module for authors of Node.js native addon modules.\nIt is basically the "swiss army knife" of `require()`ing your native module\'s\n`.node` file.\n\nThroughout the course of Node\'s native addon history, addons have ended up being\ncompiled in a variety of different places, depending on which build tool and which\nversion of node was used. To make matters worse, now the _gyp_ build tool can\nproduce either a _Release_ or _Debug_ build, each being built into different\nlocations.\n\nThis module checks _all_ the possible locations that a native addon would be built\nat, and returns the first one that loads successfully.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install bindings\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n`require()`ing the proper bindings file for the current node version, platform\nand architecture is as simple as:\n\n``` js\nvar bindings = require(\'bindings\')(\'binding.node\')\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n```\n\n\nNice Error Output\n-----------------\n\nWhen the `.node` file could not be loaded, `node-bindings` throws an Error with\na nice error message telling you exactly what was tried. You can also check the\n`err.tries` Array property.\n\n```\nError: Could not load the bindings file. Tried:\n → /Users/nrajlich/ref/build/binding.node\n → /Users/nrajlich/ref/build/Debug/binding.node\n → /Users/nrajlich/ref/build/Release/binding.node\n → /Users/nrajlich/ref/out/Debug/binding.node\n → /Users/nrajlich/ref/Debug/binding.node\n → /Users/nrajlich/ref/out/Release/binding.node\n → /Users/nrajlich/ref/Release/binding.node\n → /Users/nrajlich/ref/build/default/binding.node\n → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node\n    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)\n    at Object.<anonymous> (/Users/nrajlich/ref/lib/ref.js:5:47)\n    at Module._compile (module.js:449:26)\n    at Object.Module._extensions..js (module.js:467:10)\n    at Module.load (module.js:356:32)\n    at Function.Module._load (module.js:312:12)\n    ...\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+368 silly resolved     readmeFilename: 'README.md',
+368 silly resolved     _id: 'bindings@1.1.0',
+368 silly resolved     dist: { shasum: 'f3cc4deec19fe31f255864eb1e6ffad857266ef0' },
+368 silly resolved     _from: 'bindings@*',
+368 silly resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.1.0.tgz' } ]
+369 info install bindings@1.1.0 into /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis
+370 info installOne bindings@1.1.0
+371 verbose from cache /Users/robin/.npm/bindings/1.1.0/package/package.json
+372 info /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings unbuild
+373 verbose read json /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings/package.json
+374 verbose tar unpack /Users/robin/.npm/bindings/1.1.0/package.tgz
+375 silly lockFile 354ec664-es-hiredis-node-modules-bindings /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings
+376 verbose lock /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings /Users/robin/.npm/354ec664-es-hiredis-node-modules-bindings.lock
+377 silly gunzTarPerm modes [ '755', '644' ]
+378 silly gunzTarPerm extractEntry package.json
+379 silly gunzTarPerm extractEntry README.md
+380 silly gunzTarPerm extractEntry bindings.js
+381 verbose read json /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings/package.json
+382 silly lockFile 354ec664-es-hiredis-node-modules-bindings /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings
+383 info preinstall bindings@1.1.0
+384 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings/package.json
+385 verbose readDependencies using package.json deps
+386 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings/package.json
+387 verbose readDependencies using package.json deps
+388 silly resolved []
+389 verbose about to build /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings
+390 info build /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings
+391 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules/bindings/package.json
+392 verbose linkStuff [ false,
+392 verbose linkStuff   false,
+392 verbose linkStuff   false,
+392 verbose linkStuff   '/Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/node_modules' ]
+393 info linkStuff bindings@1.1.0
+394 verbose linkBins bindings@1.1.0
+395 verbose linkMans bindings@1.1.0
+396 verbose rebuildBundles bindings@1.1.0
+397 info install bindings@1.1.0
+398 info postinstall bindings@1.1.0
+399 verbose about to build /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis
+400 info build /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis
+401 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/package.json
+402 verbose linkStuff [ false,
+402 verbose linkStuff   false,
+402 verbose linkStuff   false,
+402 verbose linkStuff   '/Users/robin/Dropbox/Kiln-robin/artangel/node_modules' ]
+403 info linkStuff hiredis@0.1.15
+404 verbose linkBins hiredis@0.1.15
+405 verbose linkMans hiredis@0.1.15
+406 verbose rebuildBundles hiredis@0.1.15
+407 verbose rebuildBundles [ 'bindings' ]
+408 info install hiredis@0.1.15
+409 verbose unsafe-perm in lifecycle true
+410 silly exec sh "-c" "node-gyp rebuild"
+411 silly sh,-c,node-gyp rebuild,/Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis spawning
+412 info hiredis@0.1.15 Failed to exec install script
+413 info /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis unbuild
+414 verbose from cache /Users/robin/Dropbox/Kiln-robin/artangel/node_modules/hiredis/package.json
+415 info preuninstall hiredis@0.1.15
+416 info uninstall hiredis@0.1.15
+417 verbose true,/Users/robin/Dropbox/Kiln-robin/artangel/node_modules,/Users/robin/Dropbox/Kiln-robin/artangel/node_modules unbuild hiredis@0.1.15
+418 info postuninstall hiredis@0.1.15
+419 error hiredis@0.1.15 install: `node-gyp rebuild`
+419 error `sh "-c" "node-gyp rebuild"` failed with 1
+420 error Failed at the hiredis@0.1.15 install script.
+420 error This is most likely a problem with the hiredis package,
+420 error not with npm itself.
+420 error Tell the author that this fails on your system:
+420 error     node-gyp rebuild
+420 error You can get their info via:
+420 error     npm owner ls hiredis
+420 error There is likely additional logging output above.
+421 error System Darwin 12.3.0
+422 error command "node" "/usr/local/bin/npm" "install" "hiredis" "redis"
+423 error cwd /Users/robin/Dropbox/Kiln-robin/artangel
+424 error node -v v0.8.18
+425 error npm -v 1.2.2
+426 error code ELIFECYCLE
+427 verbose exit [ 1, true ]
