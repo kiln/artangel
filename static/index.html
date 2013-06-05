@@ -116,8 +116,16 @@
 			$("#title").click(function(){
 				$("#wrapper").addClass("animated pulse")
 			});
-			poll(audio);
 		});
+
+        var played_before = false;
+        function audioPlayed() {
+            if (played_before) return;
+			var audio = document.getElementsByTagName("audio")[0];
+            audio.removeAttribute("controls");
+			poll(audio);
+            played_before = true;
+        }
 		
 	</script>
 	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -127,7 +135,7 @@
 		<div id="title">Artangel Burma project</div>
 		<div id="searchdetail">Bell search: <span id="searchterm">Spanner</span></div>
 		<div id="tweet"></div>
-		<audio>
+		<audio controls onplay="audioPlayed();">
 		  <source src="" type="audio/wav">
 		</audio>
 	</div>
