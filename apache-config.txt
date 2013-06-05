@@ -1,0 +1,17 @@
+# This is how I have defined my local virtual host
+
+<VirtualHost *:80>
+    ServerAdmin robin.houston@gmail.com
+    ServerName artangel.local
+    
+    DocumentRoot "/Users/robin/Kiln/artangel/static"
+    ProxyPass /search.json http://localhost:8124/
+    ProxyPassreverse / http://localhost:9876/
+
+    ErrorLog "/Users/robin/Kiln/artangel/logs/error_log"
+    CustomLog "/Users/robin/Kiln/artangel/logs/access_log" common
+</VirtualHost>
+<Directory "/Users/robin/Kiln/artangel/static">
+  Order allow,deny
+  Allow from all
+</Directory>

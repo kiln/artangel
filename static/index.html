@@ -52,11 +52,20 @@
 			return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 		}
 		
-		var searchterm = getParameterByName("keyword");
+		var searchterm = getParameterByName("keyword") || "burma";
 		var soundtoplay = sounds[searchterm];
+		
+		function poll() {
+			$.get("/search.json", function(d) {
+				console.log(d);
+				poll();
+			});
+		}
 		
 		$(document).ready(function() {
 			$("source").attr("src", "sounds/" + soundtoplay);
+			$("#searchterm").text(searchterm);
+			poll();
 		});
 		
 	</script>
