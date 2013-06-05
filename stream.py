@@ -2,7 +2,7 @@
 
 import json
 import optparse
-import sys
+import re
 import types
 
 import redis
@@ -17,6 +17,10 @@ oauth_data = {
 
 BURMA_BOUNDING_BOX = [91.833, 6.000, 102.000, 28.350]
 
+KEYWORDS = [
+    "burma", "democracy", "rohingya", "human rights",
+    "transparency", "election", "artangel", "violence"
+]
 
 # Methods for converting Tweepy objects to JSON
 def _as_json(o):
@@ -40,9 +44,9 @@ def _as_dict(o):
 
 # Parse the command-line options
 parser = optparse.OptionParser()
-parser.add_option("", "--channel",
-                  action="store", default="artangel",
-                  help="Redis channel to publish results on")
+# parser.add_option("", "--channel",
+#                   action="store", default="artangel",
+#                   help="Redis channel to publish results on")
 (options, keywords) = parser.parse_args()
 
 # Create a Redis connection (It does not actually connect till used)
@@ -52,7 +56,7 @@ auth = tweepy.OAuthHandler(oauth_data["CONSUMER_KEY"], oauth_data["CONSUMER_SECR
 auth.set_access_token(oauth_data["ACCESS_TOKEN"], oauth_data["ACCESS_TOKEN_SECRET"])
 
 # Create a Tweepy API object
-api = tweepy.API(auth)
+api = tweepy.API(auth, secure=True)
 
 # The current released version of Tweepy does not have the get_oembed function yet
 api.get_oembed = types.MethodType(
@@ -62,11 +66,38 @@ api.get_oembed = types.MethodType(
         allowed_param = ['id', 'url', 'maxwidth', 'hide_media', 'omit_script', 'align', 'related', 'lang']
     ), api)
 
+def text_to_html(text):
+    return re.sub(r"[&<>\"']", lambda m: {
+        '&': "&amp;",
+        '<': "&lt;",
+        '>': "&gt;",
+        '"': "&quot;",
+        "'": "&apos;",
+    }[m.group(0)],text)
+
+def fake_oembed_html(status):
+    return u"""<blockquote class="twitter-tweet"><p>{tweet_text_html}</p>&mdash; {user_name} (@{user_screen_name}) <a href="https://twitter.com/{user_screen_name}/statuses/{tweet_id}">{date}</a></blockquote>""".format(
+        tweet_text_html=text_to_html(status.text),
+        user_name=status.user.name,
+        user_screen_name=status.user.screen_name,
+        tweet_id=status.id_str,
+        date=status.created_at
+    )
+
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
-        oembed_json = json.dumps(api.get_oembed(id=status.id_str))
-        number_of_listeners = r.publish(options.channel, oembed_json)
-        print "[%d listeners] %s" % (number_of_listeners, oembed_json)
+        #print _as_json(status)
+        
+        # This is the best way to get the HTML embed code, but we quickly
+        # fall foul of the rate limit if we do it this way.
+        #
+        # oembed_json = json.dumps(api.get_oembed(id=status.id_str))
+        
+        oembed_json = json.dumps({"html": fake_oembed_html(status)})
+        for keyword in KEYWORDS:
+            if re.search(r"\b" + keyword, status.text, re.I):
+                print "MATCH " + keyword
+                r.publish(keyword, oembed_json)
 
 # Perform the search
 listener = MyStreamListener()

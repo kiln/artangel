@@ -77,42 +77,48 @@
 		}
 	</style>
 	<script>
-		var sounds = {
-			"burma": "1.wav",
-			"democracy": "2.wav",
-			"rohingya": "3.wav",
-			"human rights": "4.wav",
-			"transparency": "5.wav",
-			"election": "6.wav",
-			"artangel": "7.wav",
-			"violence": "8.wav"
-		};
-
-		function getParameterByName(name) {
-			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-				results = regex.exec(location.search);
-			return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-		}
+		var SOUND_URL_BASE = "https://dl.dropboxusercontent.com/u/31420072/risebells/";
 		
-		var searchterm = getParameterByName("keyword") || "burma";
-		var soundtoplay = sounds[searchterm];
+		var SOUNDS = [
+			"1.mp3", "2.mp3", "3.mp3", "4.mp3",
+			"5.mp3", "6.mp3", "7.mp3", "8.mp3"
+		];
+		var CHANNELS = [
+			"burma", "democracy", "rohingya", "human rights",
+			"transparency", "election", "artangel", "violence"
+		];
+
+		var index = 0;
+		if (window.location.search)
+		var index = parseInt(window.location.search.substring(1)) || 0;
 		
 		function poll(audio) {
-			$.get("/search.json", function(d) {
-				audio.currentTime = 0;
-				audio.play();
-				$("#tweet").html(d.html);
-				if (twttr) twttr.widgets.load();
+			$.ajax({
+				url: "/search.json?channel=" + CHANNELS[index],
+				type: "GET",
+				dataType: "json",
+				timeout: 10000,
+				success: function(response) {
+					if (audio.readyState >= 4) {
+						audio.currentTime = 0;
+						audio.play();
+					}
+					$("#tweet").html(response.html);
+					if (twttr) twttr.widgets.load();
 				
-				poll(audio);
+					poll(audio);
+				},
+				error: function(x, t, m) {
+					// Just try again
+					poll(audio);
+				}
 			});
 		}
 		
 		$(document).ready(function() {
 			var audio = document.getElementsByTagName("audio")[0];
-			$("source").attr("src", "https://dl.dropboxusercontent.com/u/31420072/risebells/" + soundtoplay);
-			$("#searchterm").text(searchterm);
+			$("source").attr("src", SOUND_URL_BASE + SOUNDS[index]);
+			$("#searchterm").text(CHANNELS[index]);
 			$("#title").click(function(){
 				$("#wrapper").addClass("animated pulse")
 			});

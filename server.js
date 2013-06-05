@@ -1,12 +1,17 @@
 var redis = require("redis"),
-    r = redis.createClient();
+    url = require("url");
 
 var http = require('http');
 http.createServer(function (req, res) {
-    console.log("Request received...");
-    r.subscribe("artangel");
+    var preq = url.parse(req.url, true),
+        channel = preq.query.channel;
+    console.log("Listening on channel '" + channel + "'...");
+    
+    var r = redis.createClient();
+    r.subscribe(channel);
     res.writeHead(200, {'Content-Type': 'application/json', 'Cache-Control': 'no-cache'});
     r.once("message", function (channel, message) {
+        r.quit();
         console.log(message);
         res.end(message);
     });
