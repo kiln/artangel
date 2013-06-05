@@ -3,9 +3,11 @@ var redis = require("redis"),
 
 var http = require('http');
 http.createServer(function (req, res) {
+    console.log("Request received...");
     r.subscribe("artangel");
-    res.writeHead(200, {'Content-Type': 'text/plain', 'Cache-Control': 'no-cache'});
+    res.writeHead(200, {'Content-Type': 'application/json', 'Cache-Control': 'no-cache'});
     r.once("message", function (channel, message) {
+        console.log(message);
         res.end(message);
     });
 

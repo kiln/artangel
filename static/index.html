@@ -33,6 +33,10 @@
 			width: 100%;
 		}
 		
+		#tweet blockquote {
+			display: none;
+		}
+		
 		@-webkit-keyframes pulse {
 		    0% { -webkit-transform: scale(1.5); }	
 			50% { -webkit-transform: scale(2); }
@@ -94,35 +98,36 @@
 		var searchterm = getParameterByName("keyword") || "burma";
 		var soundtoplay = sounds[searchterm];
 		
-		function poll() {
+		function poll(audio) {
 			$.get("/search.json", function(d) {
-				console.log(d);
-				poll();
+				audio.currentTime = 0;
+				audio.play();
+				$("#tweet").html(d.html);
+				if (twttr) twttr.widgets.load();
+				
+				poll(audio);
 			});
 		}
 		
 		$(document).ready(function() {
+			var audio = document.getElementsByTagName("audio")[0];
 			$("source").attr("src", "sounds/" + soundtoplay);
 			$("#searchterm").text(searchterm);
 			$("#title").click(function(){
 				$("#wrapper").addClass("animated pulse")
 			});
-			poll();
+			poll(audio);
 		});
-
-		//widgets.js function to call to reload tweet: twttr.widgets.load()
 		
 	</script>
+	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
 	<div id="wrapper">
 		<div id="title">Artangel Burma project</div>
 		<div id="searchdetail">Bell search: <span id="searchterm">Spanner</span></div>
-		<div id="tweet">
-			<blockquote class="twitter-tweet"><p>Praise the Lords! A landslide victory for love, marriage &amp; equality. Lords voted 390 in favour of <a href="https://twitter.com/search/%23EqualMarriage">#EqualMarriage</a>, 148 against. Majority 242</p>&mdash; Peter Tatchell (@PeterTatchell) <a href="https://twitter.com/PeterTatchell/status/342212996942151680">June 5, 2013</a></blockquote>
-			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
-		<audio controls>
+		<div id="tweet"></div>
+		<audio>
 		  <source src="" type="audio/wav">
 		</audio>
 	</div>

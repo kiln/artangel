@@ -45,16 +45,29 @@ parser.add_option("", "--channel",
                   help="Redis channel to publish results on")
 (options, keywords) = parser.parse_args()
 
-# Create a Redis connection (It does not actu)
+# Create a Redis connection (It does not actually connect till used)
 r = redis.StrictRedis()
 
-# Perform the search
 auth = tweepy.OAuthHandler(oauth_data["CONSUMER_KEY"], oauth_data["CONSUMER_SECRET"])
 auth.set_access_token(oauth_data["ACCESS_TOKEN"], oauth_data["ACCESS_TOKEN_SECRET"])
 
+# Create a Tweepy API object
+api = tweepy.API(auth)
+
+# The current released version of Tweepy does not have the get_oembed function yet
+api.get_oembed = types.MethodType(
+    tweepy.binder.bind_api(
+        path = '/statuses/oembed.json',
+        payload_type = 'json',
+        allowed_param = ['id', 'url', 'maxwidth', 'hide_media', 'omit_script', 'align', 'related', 'lang']
+    ), api)
+
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
-        r.publish(options.channel, _as_json(status))
+        oembed_json = json.dumps(api.get_oembed(id=status.id_str))
+        number_of_listeners = r.publish(options.channel, oembed_json)
+        print "[%d listeners] %s" % (number_of_listeners, oembed_json)
 
+# Perform the search
 listener = MyStreamListener()
 tweepy.Stream(auth, listener).filter(track=keywords)
