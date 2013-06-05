@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Artangel Burma project</title>
+	<meta name="viewport" content="width=device-width">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<style type="text/css">
+		#wrapper {
+			margin-top: 100px; 
+			width: 400px;
+			margin: 50px auto;
+			font-family: Georgia, serif;
+			font-size: 26px;
+			transform: scale(1.5,1.5);
+			transform-origin: 50% 0%;
+			-ms-transform: scale(1.5,1.5); /* IE 9 */
+			-ms-transform-origin: 50% 0%; 
+			-webkit-transform: scale(1.5,1.5); /* Safari and Chrome */
+			-webkit-transform-origin: 50% 0%; 
+		}
+		#title {
+			color: #999;
+		}
+		#searchdetail {
+			color: #666;
+			font-size: 18px;
+			margin: 5px 0 28px;
+		}
+		#searchterm {
+			
+		}
+		#audio {
+			width: 100%;
+		}
+	</style>
+	<script>
+		var sounds = {
+			"burma": "1.wav",
+			"democracy": "2.wav",
+			"rohingya": "3.wav",
+			"human rights": "4.wav",
+			"transparency": "5.wav",
+			"election": "6.wav",
+			"artangel": "7.wav",
+			"violence": "8.wav"
+		};
+
+		function getParameterByName(name) {
+			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+			return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+		
+		var searchterm = getParameterByName("keyword");
+		var soundtoplay = sounds[searchterm];
+		
+		$(document).ready(function() {
+			$("source").attr("src", "sounds/" + soundtoplay);
+		});
+		
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="title">Artangel Burma project</div>
+		<div id="searchdetail">Bell search: <span id="searchterm">Spanner</span></div>
+		<div id="tweet">
+			<blockquote class="twitter-tweet"><p>Praise the Lords! A landslide victory for love, marriage &amp; equality. Lords voted 390 in favour of <a href="https://twitter.com/search/%23EqualMarriage">#EqualMarriage</a>, 148 against. Majority 242</p>&mdash; Peter Tatchell (@PeterTatchell) <a href="https://twitter.com/PeterTatchell/status/342212996942151680">June 5, 2013</a></blockquote>
+			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		<audio controls>
+		  <source src="" type="audio/wav">
+		</audio>
+	</div>
+</body>
+</html>
