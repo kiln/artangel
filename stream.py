@@ -3,6 +3,7 @@
 import json
 import optparse
 import re
+import sys
 import types
 
 import redis
@@ -98,6 +99,10 @@ class MyStreamListener(tweepy.StreamListener):
             if re.search(r"\b" + keyword, status.text, re.I):
                 print "MATCH " + keyword
                 r.publish(keyword, oembed_json)
+
+    def on_error(self, status_code):
+        print >>sys.stderr, "Error from Twitter streaming API: " + status_code
+        return False
 
 # Perform the search
 listener = MyStreamListener()
