@@ -11,12 +11,6 @@
 			margin: 50px auto;
 			font-family: Georgia, serif;
 			font-size: 26px;
-			transform: scale(1.5,1.5);
-			transform-origin: 50% 0%;
-			-ms-transform: scale(1.5,1.5); /* IE 9 */
-			-ms-transform-origin: 50% 0%; 
-			-webkit-transform: scale(1.5,1.5); /* Safari and Chrome */
-			-webkit-transform-origin: 50% 0%; 
 		}
 		#title {
 			color: #999;
@@ -122,8 +116,16 @@
 			$("#title").click(function(){
 				$("#wrapper").addClass("animated pulse")
 			});
-			poll(audio);
 		});
+
+        var played_before = false;
+        function audioPlayed() {
+            if (played_before) return;
+			var audio = document.getElementsByTagName("audio")[0];
+            audio.removeAttribute("controls");
+			poll(audio);
+            played_before = true;
+        }
 		
 	</script>
 	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -133,7 +135,7 @@
 		<div id="title">Artangel Burma project</div>
 		<div id="searchdetail">Bell search: <span id="searchterm">Spanner</span></div>
 		<div id="tweet"></div>
-		<audio>
+		<audio controls onplay="audioPlayed();">
 		  <source src="" type="audio/wav">
 		</audio>
 	</div>
