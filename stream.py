@@ -19,7 +19,7 @@ BURMA_BOUNDING_BOX = [91.833, 6.000, 102.000, 28.350]
 
 KEYWORDS = [
     "burma", "democracy", "rohingya", "human rights",
-    "transparency", "election", "artangel", "violence"
+    "transparency", "election", "myanmar", "violence"
 ]
 
 # Methods for converting Tweepy objects to JSON
@@ -44,9 +44,6 @@ def _as_dict(o):
 
 # Parse the command-line options
 parser = optparse.OptionParser()
-# parser.add_option("", "--channel",
-#                   action="store", default="artangel",
-#                   help="Redis channel to publish results on")
 (options, args) = parser.parse_args()
 
 # Create a Redis connection (It does not actually connect till used)
