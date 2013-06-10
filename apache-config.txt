@@ -6,7 +6,7 @@
     
     DocumentRoot "/Users/robin/Kiln/artangel/static"
     ProxyPass /search.json http://localhost:8124/
-    ProxyPassreverse / http://localhost:9876/
+    ProxyPassreverse / http://localhost:8124/
 
     ErrorLog "/Users/robin/Kiln/artangel/logs/error_log"
     CustomLog "/Users/robin/Kiln/artangel/logs/access_log" common
