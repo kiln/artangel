@@ -9,12 +9,7 @@ import types
 import redis
 import tweepy
 
-oauth_data = {
-    "CONSUMER_KEY": "B0RgCrQ73LK5gWyRYPVLYA",
-    "CONSUMER_SECRET": "bLpNaI7ziNUQFyVM0XLHDoqnaRLzlymiz2qY4Yes",
-    "ACCESS_TOKEN": "34650516-UERO93A7gDvh11vHJvD1QPv6JvB3BHQgLPntudtni",
-    "ACCESS_TOKEN_SECRET": "r9igzim5q4RmD9NMjRFmOQN4ayrTEgjKEZctWRlEBU",
-}
+import secrets
 
 BURMA_BOUNDING_BOX = [91.833, 6.000, 102.000, 28.350]
 
@@ -50,8 +45,8 @@ parser = optparse.OptionParser()
 # Create a Redis connection (It does not actually connect till used)
 r = redis.StrictRedis()
 
-auth = tweepy.OAuthHandler(oauth_data["CONSUMER_KEY"], oauth_data["CONSUMER_SECRET"])
-auth.set_access_token(oauth_data["ACCESS_TOKEN"], oauth_data["ACCESS_TOKEN_SECRET"])
+auth = tweepy.OAuthHandler(secrets.CONSUMER_KEY, secrets.CONSUMER_SECRET)
+auth.set_access_token(secrets.ACCESS_TOKEN, secrets.ACCESS_TOKEN_SECRET)
 
 # Create a Tweepy API object
 api = tweepy.API(auth, secure=True)
